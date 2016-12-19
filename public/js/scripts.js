@@ -48,7 +48,7 @@ $(function() {
     // options for map
     // https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var options = {
-        center: {lat: 37.4236, lng: -122.1619}, // Stanford, California
+        center: {lat: 25.1666, lng: 75.8666}, // Kota, Rajasthan
         disableDefaultUI: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         maxZoom: 14,
@@ -108,7 +108,7 @@ function configure()
         source: search,
         templates: {
             empty: "no places found yet",
-            suggestion: _.template("<p>TODO</p>")
+            suggestion: _.template("<div id=\"template\"><p><div id=\"placename\"><%- place_name %>, <%- admin_name1 %></div> <div id=\"postalcode\"><%- postal_code %></div></p></div>")
         }
     });
 

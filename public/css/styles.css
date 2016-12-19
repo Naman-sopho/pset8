@@ -96,3 +96,15 @@ html, body, #map-canvas, .container-fluid
 .tt-suggestion p {
     margin: 0;
 }
+
+#template {
+    color: black;
+}
+
+#postalcode, #placename {
+    display: inline;
+}
+#postalcode {
+    color: silver;
+    font-size: small;
+}
