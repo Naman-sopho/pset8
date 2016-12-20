@@ -103,7 +103,8 @@ function addMarker(place) {
 
     // empty news array to tackle if user clicks multiple times on the same marker
     news.length = 0;
-
+    
+    news.push("<h4>" + label + "</h4>");
     news.push("<ul>");
 
     $("#loader").show();
