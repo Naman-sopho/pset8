@@ -108,3 +108,8 @@ html, body, #map-canvas, .container-fluid
     color: silver;
     font-size: small;
 }
+
+.labels {
+    font-size: small;
+    display: inline;
+}
