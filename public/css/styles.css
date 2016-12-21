@@ -26,6 +26,7 @@ html, body, #map-canvas, .container-fluid
 /* align form to right of pan control */
 #form
 {
+    opacity : 0.3;
     /* distance from left edge of viewport */
     left: 100px;
 
@@ -112,4 +113,12 @@ html, body, #map-canvas, .container-fluid
 .labels {
     font-size: small;
     display: inline;
+}
+
+#form:hover {
+    opacity : 1;
+}
+
+#form:selection {
+    opacity : 1;
 }
