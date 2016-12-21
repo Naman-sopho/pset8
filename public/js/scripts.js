@@ -107,14 +107,17 @@ function addMarker(place) {
     news.push("<h4>" + label + "</h4>");
     news.push("<ul>");
 
-    $("#loader").show();
     // render unordered list from the JSON of articles.php
     $.getJSON("articles.php", param).done(function(data) {
-      $.each(data, function(i, headline) {
-        news.push("<li><a href='" + headline.link + "' target=_blank>" + headline.title + "</a></li>");
-        $("#loader").hide();
-      });
-
+      
+      if ( data.length == 0 ) {
+        news.push("<br><h2> No headlines to show. <br> Check back later! </h2>");
+    }
+      else {
+        $.each(data, function(i, headline) {
+          news.push("<li><a href='" + headline.link + "' target=_blank>" + headline.title + "</a></li>");
+        });
+      }
       news.push("</ul>");
       // set content of the infowindow
       info.setContent(news.join("\n"));
